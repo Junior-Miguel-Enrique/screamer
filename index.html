@@ -41,8 +41,21 @@
 
 <body>
 
+  <!-- Imagen -->
   <img src="cara.jpg">
+
+  <!-- Flash encima -->
   <div class="flash"></div>
+
+  <!-- Sonido -->
+  <audio id="grito" src="grito.mp3"></audio>
+
+  <script>
+    // Reproduce sonido al primer toque (funciona en móvil)
+    document.body.addEventListener("click", function () {
+      document.getElementById("grito").play();
+    }, { once:true });
+  </script>
 
 </body>
 </html>
