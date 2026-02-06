@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+body {
+  text-align:center;
+  margin:0;
+}
+
+/* Flash overlay */
+#flash {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:white;
+  pointer-events:none;
+  animation: flash 0.09s infinite;
+}
+
+@keyframes flash {
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="cara.jpg" width="1400" height="700">
+
+<!-- Audio -->
+<audio id="snd">
+  <source src="grito.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Flash -->
+<div id="flash"></div>
+
+<script>
+window.onload = function() {
+  document.getElementById("snd").play();
+}
+</script>
+
+</body>
+</html>
